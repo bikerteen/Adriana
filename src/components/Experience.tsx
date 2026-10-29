@@ -139,16 +139,9 @@ function Gate({ onOpen }: { onOpen: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 1.6, filter: "blur(24px)", transition: { duration: 0.5 } }}
     >
-      <div className="flex w-full max-w-xl items-center justify-between font-mono text-[11px] uppercase tracking-[0.25em] text-white/60">
-        <span className="flex items-center gap-2">
-          <span className="blink inline-block h-2 w-2 rounded-full bg-red" />
-          Incoming
-        </span>
-        <span>NFC / 001</span>
-      </div>
+      <div aria-hidden />
 
       <div className="flex flex-col items-center gap-5">
-        <p className="font-mono text-xs uppercase tracking-[0.35em] text-red">Classified delivery for</p>
         <h1 className="font-display text-[clamp(64px,20vw,180px)] uppercase leading-[0.85] tracking-tight">
           <DecryptedText text="ADRIANA" duration={1400} delay={300} />
           <br />
